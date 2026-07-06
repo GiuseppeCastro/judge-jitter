@@ -1,21 +1,16 @@
 # judge-jitter
 
-Your LLM judge might be changing its mind. Measure it.
+Your LLM judge might be changing its mind all the time. 
 
 ## The problem
 
-LLM-as-a-judge is everywhere: you ask GPT or Claude to score model outputs and
+LLM as a judge is everywhere, you ask GPT or Claude to score model outputs and
 trust the number. But most people run each judgment **once**. Send the exact
 same example to the same judge ten times and it will often give different
 scores — which means your eval results are partly noise.
 
 `judge-jitter` runs the same judgment `k` times per example and tells you
 whether your judge is stable enough to trust.
-
-## Demo
-
-> Add a terminal GIF here (`assets/demo.gif`). Record with
-> [vhs](https://github.com/charmbracelet/vhs) or asciinema.
 
 ## Install
 
