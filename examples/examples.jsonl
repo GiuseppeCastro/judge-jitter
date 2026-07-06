@@ -1,0 +1,5 @@
+{"id": "example_001", "input": "What is the capital of France?", "answer": "The capital of France is Paris.", "reference": "Paris"}
+{"id": "example_002", "input": "What is the capital of Australia?", "answer": "The capital of Australia is Sydney.", "reference": "Canberra"}
+{"id": "example_003", "input": "Explain what HTTP status code 404 means.", "answer": "It means the server could not find the requested resource.", "reference": "404 Not Found: the server cannot find the requested resource."}
+{"id": "example_004", "input": "Summarize photosynthesis in one sentence.", "answer": "Plants turn sunlight, water and carbon dioxide into glucose and oxygen."}
+{"id": "example_005", "input": "Is it safe to store API keys in frontend code?", "answer": "Yes, as long as the repository is private."}
