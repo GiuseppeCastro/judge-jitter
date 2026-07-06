@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "judge-jitter"
+version = "0.1.0"
+description = "Measure whether your LLM judge is consistent by running the same judgment k times."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Giuseppe Pretto" }]
+keywords = ["llm", "evaluation", "llm-as-judge", "reliability"]
+dependencies = [
+    "typer>=0.12",
+    "rich>=13.7",
+    "pydantic>=2.7",
+    "openai>=1.30",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.4"]
+
+[project.scripts]
+judge-jitter = "judge_jitter.cli:app"
+
+[project.urls]
+Repository = "https://github.com/GiuseppeCastro/judge-jitter"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/judge_jitter"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
